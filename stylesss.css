@@ -1,0 +1,47 @@
+*{
+    margin:0; /*Reset default margin and padding for all elements*/
+    padding:0;
+  }
+  /* Define a CSS variable for unit size*/
+  :root{
+    --unit:calc(min(100vh - 80px,100vw) / 7);  
+  }
+  
+  div{
+    color:#0101f7; 
+  }
+  #TopDiv1{
+    background-color:#008000;
+    width:calc(7 * var(--unit));
+   }
+   /* apply styles to an elements with id on Topdiv */
+   #TopDiv1 p{
+    color:aquamarine;
+  }
+  #TopDiv2{
+    background:red;
+    border:5px solid black;
+    width:calc(var(--unit) - 10px);
+    height:calc(var(--unit) - 10px);
+  }
+  /* Apply styles to an element with id on MidDiv*/
+  #MidDiv1{
+    background:#008000;
+    border:10px solid #ffcccc;
+    /*Make width and height adjust 2 times  based on unit size*/
+    width:calc(2 * var(--unit) - 40px);
+    height:calc(2 * var(--unit) - 40px);
+    padding:10px;
+    margin-left:calc(var(--unit));
+  }
+  /* Apply styles to an elements with id on Bottom div*/
+  #BottomDiv1{
+    background:#0000ff;
+    color:#008000;
+    border:20px solid #ff4dff;
+    /* Make width and height adjust 4 times based on top div and mid div*/
+    width:calc(4 * var(--unit) - 110px);
+    height:calc(4 * var(--unit) - 110px);
+    padding:40px;
+    margin-left:calc(3 * var(--unit));
+  }
